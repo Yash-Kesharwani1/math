@@ -1,8 +1,87 @@
 <html>
+<head>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    .login {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00796b;
+    }
+
+    legend {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #004d40;
+      margin-bottom: 20px;
+      display: block;
+      text-align: center;
+    }
+
+    .form-label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+      color: #333;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+
+    .btn-primary {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background-color: #004d40;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 1.3em;
+      color: #00695c;
+    }
+
+    select:invalid {
+      color: gray;
+    }
+
+    option.placeholder {
+      color: #999;
+    }
+  </style>
+</head>
+
 <body>
     <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
-   
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
             <legend>Student Exam Performance Prediction</legend>
