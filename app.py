@@ -11,7 +11,7 @@ application=Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html') 
+    return "math score predictor running"
 
 @app.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
